@@ -44,31 +44,62 @@ namespace Desafio1_PED
             int genero = comboBox1.SelectedIndex;
             int sangre = comboBox2.SelectedIndex;
             int presion = comboBox3.SelectedIndex;
-            List<string> listOfUsers = new List<string>();
-         
+            
             Console.WriteLine(genero);
             if (genero == -1 || sangre == -1 || presion == -1)
             {
-                MessageBox.Show("Todos Los Datos son Oblitarios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Todos Los Datos son Obligatorios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else 
             {
-                ////Recorremos el mismo para agregar 
-                //for (int iRaiz = 0; iRaiz < 2; iRaiz ++)
-                //{
-                //     if (iRaiz == 0) //agregamos  paciente al sexo
-                //    {
-                //        for (int igenero = 0; igenero < 1; igenero++)
-                //        {
-                //            if (genero == igenero)
-                //            {
-                //                //agregamos a nodo Masculino
-                //                listOfUsers[igenero].agregarHijo(nPaciente);
-                //            }
-                //        }
-                //    }
-                //}
-                MessageBox.Show("Todos Los Datos son Oblitarios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ////Recorremos la raiz
+                for (int iRaiz = 0; iRaiz < raiz.getHijos().Count; iRaiz++)
+                {
+                    if (iRaiz == 0) //comparamos la posicion 0 que es Genero
+                    {
+                        for (int igenero = 0; igenero < raiz.getHijos()[iRaiz].getHijos().Count; igenero++)//Recorremos Genero
+                        {
+                            if (genero == igenero)// lo capturado sea igual a la piscion del arreglo genero
+                            {
+                                //Console.WriteLine(raiz.getHijos()[iRaiz].getHijos()[igenero].getValor());
+                                //agregamos a nodo Masculino
+                                Nodo<String> g1 = new Nodo<String>(raiz.getHijos()[iRaiz].getHijos()[igenero], nPaciente);//Se crea hijo  segun lo capturado
+                                raiz.getHijos()[iRaiz].getHijos()[igenero].agregarHijo(g1);//se añade el hijo al padre
+                            }
+                        }
+                       
+                    }
+
+                    if (iRaiz == 1) //comparamos la posicion 1 que es Sangre
+                    {
+                        for (int isangre = 0; isangre < raiz.getHijos()[iRaiz].getHijos().Count; isangre++)//Recorremos Genero
+                        {
+                            if (sangre == isangre)// lo capturado sea igual a la piscion del arreglo genero
+                            {
+                                //Console.WriteLine(raiz.getHijos()[iRaiz].getHijos()[igenero].getValor());
+                                //agregamos a nodo Masculino
+                                Nodo<String> s1 = new Nodo<String>(raiz.getHijos()[iRaiz].getHijos()[isangre], nPaciente);//Se crea hijo  segun lo capturado
+                                raiz.getHijos()[iRaiz].getHijos()[isangre].agregarHijo(s1);//se añade el hijo al padre
+                            }
+                        }
+
+                    }
+                    if (iRaiz == 2) //comparamos la posicion 2 que es Presion
+                    {
+                        for (int ipresion = 0; ipresion < raiz.getHijos()[iRaiz].getHijos().Count; ipresion++)//Recorremos Genero
+                        {
+                            if (presion == ipresion)// lo capturado sea igual a la piscion del arreglo genero
+                            {
+                                //Console.WriteLine(raiz.getHijos()[iRaiz].getHijos()[igenero].getValor());
+                                //agregamos a nodo Masculino
+                                Nodo<String> p1 = new Nodo<String>(raiz.getHijos()[iRaiz].getHijos()[ipresion], nPaciente);//Se crea hijo  segun lo capturado
+                                raiz.getHijos()[iRaiz].getHijos()[ipresion].agregarHijo(p1);//se añade el hijo al padre
+                            }
+                        }
+
+                    }
+                }
+                //MessageBox.Show("Todos Los Datos son Oblitarios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
