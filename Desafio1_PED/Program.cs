@@ -16,7 +16,7 @@ namespace Desafio1_PED
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new CapturaDatos());
         }
     }
 }
