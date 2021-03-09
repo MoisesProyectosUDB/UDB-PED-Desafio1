@@ -19,6 +19,7 @@ namespace Desafio1_PED
 
         private void CapturaDatos_FormClosing(object sender, FormClosingEventArgs e)
         {
+            //werfasdasdasdsdada
             Application.Exit();
         }
 
