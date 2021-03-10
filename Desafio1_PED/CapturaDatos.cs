@@ -54,7 +54,7 @@ namespace Desafio1_PED
                     {
                         for (int igenero = 0; igenero < raiz.getHijos()[iRaiz].getHijos().Count; igenero++)//Recorremos Genero
                         {
-                            if (genero == igenero)// lo capturado sea igual a la piscion del arreglo genero
+                            if (genero == igenero)// lo capturado sea igual a la posicion del arreglo genero
                             {
                                 //Console.WriteLine(raiz.getHijos()[iRaiz].getHijos()[igenero].getValor());
                                 //agregamos a Arbol Masculino
@@ -67,9 +67,9 @@ namespace Desafio1_PED
 
                     if (iRaiz == 1) //comparamos la posicion 1 que es Sangre
                     {
-                        for (int isangre = 0; isangre < raiz.getHijos()[iRaiz].getHijos().Count; isangre++)//Recorremos Genero
+                        for (int isangre = 0; isangre < raiz.getHijos()[iRaiz].getHijos().Count; isangre++)//Recorremos sangre
                         {
-                            if (sangre == isangre)// lo capturado sea igual a la piscion del arreglo genero
+                            if (sangre == isangre)// lo capturado sea igual a la posicion del arreglo sangre
                             {
                                 //Console.WriteLine(raiz.getHijos()[iRaiz].getHijos()[igenero].getValor());
                                 //agregamos a Arbol Masculino
@@ -113,6 +113,7 @@ namespace Desafio1_PED
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //Graficcar Arbol
             string Cadena = DibujarFijura();//Obtienen la cadena a utilzar por Graphviz 
             if (string.IsNullOrEmpty(Cadena) != true)//Evaluamos si no esta null o vacia 
             {
@@ -131,7 +132,7 @@ namespace Desafio1_PED
                         }
                         catch (Exception x) // En caso de error ...
                         {
-                            MessageBox.Show("No se pudo abrir el archivo", "E R R OR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            
                             MessageBox.Show("No se pudo cargar la imagen del archivo", "E R R O R", MessageBoxButtons.OK, MessageBoxIcon.Error);
                              
 
@@ -155,7 +156,7 @@ namespace Desafio1_PED
             {
                 MessageBox.Show("Ningun Valor Agregado al Arbol", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            //Graficcar Arbol
+            
         }
 
 

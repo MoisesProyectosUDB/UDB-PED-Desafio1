@@ -16,7 +16,7 @@ namespace Desafio1_PED.Model
         {
             this.padre = padre;
             this.valor = valor;
-            hijos = new List<Arbol<Tipo>> ();
+            hijos = new List<Arbol<Tipo>> ();///los hijos se devuelven en una lista
         }
               
 
@@ -38,12 +38,7 @@ namespace Desafio1_PED.Model
             return this.hijos;
         }
 
-        //public Boolean esPadre() // Indica si el nodo tiene hijos
-        //{
-        //    return !hijos.isEmpty();
-        //}
-
-        public Arbol<Tipo> getPadre()//  Devuelve el nodo padre
+       public Arbol<Tipo> getPadre()//  Devuelve el nodo padre
         {
             return this.padre;
         }
