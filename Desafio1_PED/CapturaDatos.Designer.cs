@@ -44,12 +44,12 @@ namespace Desafio1_PED
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.abbIMG = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.abbIMG)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -139,14 +139,10 @@ namespace Desafio1_PED
             this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "A+",
-            "B+",
-            "O+",
-            "AB+",
-            "A-",
-            "B-",
-            "O-",
-            "AB-"});
+            "A",
+            "B",
+            "O",
+            "AB"});
             this.comboBox2.Location = new System.Drawing.Point(110, 196);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(265, 37);
@@ -237,33 +233,34 @@ namespace Desafio1_PED
             this.label1.TabIndex = 2;
             this.label1.Text = "Nombre";
             // 
-            // pictureBox2
+            // abbIMG
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(410, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(622, 594);
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.abbIMG.Location = new System.Drawing.Point(410, 12);
+            this.abbIMG.Name = "abbIMG";
+            this.abbIMG.Size = new System.Drawing.Size(622, 594);
+            this.abbIMG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.abbIMG.TabIndex = 3;
+            this.abbIMG.TabStop = false;
             // 
             // CapturaDatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1044, 698);
-            this.Controls.Add(this.pictureBox2);
+            this.ClientSize = new System.Drawing.Size(1361, 698);
+            this.Controls.Add(this.abbIMG);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CapturaDatos";
             this.Text = "CapturaDatos";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CapturaDatos_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.abbIMG)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -277,7 +274,7 @@ namespace Desafio1_PED
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox abbIMG;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox comboBox2;
